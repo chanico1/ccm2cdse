@@ -1,0 +1,217 @@
+{
+  "id": "FUSI_TIR_SYN_L3_20260831T12Z_20260831T12Z_V100",
+  "bbox": [
+    -8.0043458,
+    37.8284912,
+    -7.5546003,
+    38.182748
+  ],
+  "type": "Feature",
+
+  "links": [
+    {
+      "rel": "collection",
+      "type": "application/json",
+      "href": "https://stac-api.production.software.internal/collections/lstfusion"
+    },
+    {
+      "rel": "parent",
+      "type": "application/json",
+      "href": "https://stac-api.production.software.internal/collections/lstfusion"
+    },
+    {
+      "rel": "root",
+      "type": "application/json",
+      "href": "https://stac-api.production.software.internal/"
+    },
+    {
+      "rel": "self",
+      "type": "application/geo+json",
+      "href": "https://stac-api.production.software.internal/collections/lstfusion/items/FUSI_TIR_SYN_L3_20260831T12Z_20260831T12Z_V100"
+    }
+  ],
+
+  "assets": {
+    "Product": {
+      "href": "s3://<CDSE_PRODUCER_BUCKET_PATH>/YYYY/MM/DD/FUSI_TIR_SYN_L3_20260831T12Z_20260831T12Z_V100.tar",
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "title": "TAR product",
+      "type": "application/tar"
+    },
+
+    "lst": {
+      "gsd": 30,
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "file:checksum": "multihash",
+      "file:local_path": "FUSI_TIR_SYN_L3_20260831T12Z_20260831T12Z_V100/FUSI_TIR_SYN_L3_20260831T12Z_20260831T12Z_V100_lst.tiff",
+      "file:size": "<LST_FILE_SIZE_BYTES>",
+      "bands": [
+        {
+          "name": "lst",
+          "unit": "K",
+          "nodata": 65535,
+          "data_type": "uint16",
+          "statistics": {
+            "mean": 31413.4546865989,
+            "stddev": 261.975362593876,
+            "maximum": 32426,
+            "minimum": 30385,
+            "valid_percent": 97.4381123540116
+          },
+          "raster:scale": 0.01,
+          "raster:offset": 0
+        }
+      ],
+      "roles": [
+        "data",
+        "temperature"
+      ],
+      "title": "Land Surface Temperature (LST)"
+    },
+
+    "lst_std": {
+      "gsd": 30,
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "file:checksum": "multihash",
+      "file:local_path": "std/lst_std_20260831T12Z_NRT.tiff",
+      "file:size": "<LST_STD_FILE_SIZE_BYTES>",
+      "bands": [
+        {
+          "name": "lst-std",
+          "unit": "K",
+          "nodata": 65535,
+          "data_type": "uint16",
+          "statistics": {
+            "mean": 364,
+            "stddev": 0,
+            "maximum": 364,
+            "minimum": 364,
+            "valid_percent": 97.4381123540116
+          },
+          "raster:scale": 0.01,
+          "raster:offset": 0
+        }
+      ],
+      "roles": [
+        "data"
+      ],
+      "title": "Standard Deviation of Land Surface Temperature"
+    },
+
+    "metadata": {
+      "href": "s3://lst-products-datastore-213979744349/lstfusion/ed68fd4a-8e88-4598-8295-18b9cd51e151/metadata/metadata_20260831T12Z_NRT.json",
+      "type": "application/json",
+      "file:checksum": "multihash",
+      "file:local_path": "metadata/metadata_20260831T12Z_NRT.json",
+      "file:size": "<METADATA_FILE_SIZE_BYTES>",
+      "roles": [
+        "metadata"
+      ],
+      "title": "Metadata"
+    }
+  },
+
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -8.00434,
+          38.182748
+        ],
+        [
+          -8.004346,
+          37.828555
+        ],
+        [
+          -7.554721,
+          37.828491
+        ],
+        [
+          -7.5546,
+          38.182669
+        ],
+        [
+          -8.00434,
+          38.182748
+        ]
+      ]
+    ]
+  },
+
+  "collection": "lstfusion",
+
+  "properties": {
+    "datetime": "2026-08-31T12:00:00Z",
+    "start_datetime": "2026-08-31T12:00:00Z",
+    "end_datetime": "2026-08-31T12:00:00Z",
+
+    "gsd": 30,
+
+    "instruments": [
+      "LST30",
+      "CLMS",
+      "MODIS_AQUA",
+      "MODIS_TERRA",
+      "VIIRS_NOAA20",
+      "VIIRS_NPP",
+      "MODIS_AQUA_NRT",
+      "MODIS_TERRA_NRT",
+      "VIIRS_NOAA20_NRT",
+      "VIIRS_NPP_NRT",
+      "HLS",
+      "S2_MOSAIC"
+    ],
+
+    "platform": "test",
+
+    "processing:facility": "<PROCESSING_FACILITY>",
+    "processing:level": "L3",
+    "processing:version": "v0.7.4",
+
+    "product:type": "LSTFUSION",
+    "product:timeliness": "<ISO_8601_DURATION>",
+    "product:timeliness_category": "RPR",
+
+    "proj:code": "EPSG:32629",
+    "proj:shape": [
+      1327,
+      1333
+    ],
+    "proj:transform": [
+      30,
+      0,
+      587200,
+      0,
+      -30,
+      4227070,
+      0,
+      0,
+      1
+    ],
+
+    "created": "2026-09-04T00:26:08.505784Z",
+    "updated": "2026-09-04T00:26:08.505784Z",
+
+    "order:id": "ed68fd4a-8e88-4598-8295-18b9cd51e151",
+    "order:status": "succeeded"
+
+
+  },
+
+  "stac_version": "1.1.0",
+
+  "stac_extensions": [
+    "https://stac-extensions.github.io/eo/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/order/v1.1.0/schema.json"
+  ]
+}
